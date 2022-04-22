@@ -1,0 +1,2 @@
+# E quando usar?
+Devemos usar o padrão SINGLETON quando temos uma classe e desejamos restringir por meio de derivação e não importa se todos tenham que chamar o método Instance() para este acesso. O padrão MONOSTATE deve ser usado quando queremos uma natureza singular de uma determinada classe e que seja transparente para os usuários quando for usar derivadas polimórficas de um único objeto.
