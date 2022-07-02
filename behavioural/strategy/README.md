@@ -8,8 +8,6 @@
 
 ## Sobre o Strategy
 
-Em vídeo: https://www.youtube.com/watch?v=mUagTgSnriQ&list=PLbIBj8vQhvm0VY5YrMrafWaQY2EnJ3j8H&index=27
-
 O Strategy é um padrão de projeto que visa separar o conceito de algoritmo da regra de negócio para permitir que vários algoritmos possam ser implementados sem a necessidade de alterar a regra de negócio ou outros algoritmos que já existam no sistema.
 
 Veja um exemplo de um problema e a solução do strategy.
@@ -22,41 +20,41 @@ As promoções podem variar de acordo com a época, com o preço total do carrin
 
 Essa promoções podem gerar muitas condicionais dentro da regra de negócio do carrinho de compras ao obter o preço com desconto. Como, por exemplo:
 
-```typescript
-// - Carrinho precisa ter no mínimo 3 produtos
-// - De acordo com o valor total o desconto pode aumentar
-if (cart.quantity >= 3) {
-  if (cart.total >= 100 && cart.total < 200) {
-    cart.discount = 10; // 10%
-  } else if (cart.total >= 200 && cart.total < 300) {
-    cart.discount = 20; // 20%
-  } else if (cart.total >= 300) {
-    cart.discount = 30; // 30%
-  }
-}
+```python
+# Carrinho precisa ter no mínimo 3 produtos
+# De acordo com o valor total o desconto pode aumentar
+if cart.quantity >= 3:
+
+  if cart.total >= 100 and cart.total < 200:
+    cart.discount = 10
+
+  elif cart.total >= 200 && cart.total < 300:
+    cart.discount = 20
+    
+  elif cart.total >= 300:
+    cart.discount = 30
 ```
 Não há problemas nessa lógica enquanto houver apenas essa promoção. Porém, a partir do momento que a promoção muda ou que implementemos outras promoções que são aplicadas ao mesmo tempo, devemos alterar a classe do carrinho de compras. Isso quebra o princípio do Aberto/Fechado e o princípio da responsabilidade única. E tem mais, se quiséssemos guardar a promoção antiga para retorná-la posteriormente, eu penso que alguns programadores poderiam pensar em fazer algo assim:
 
-```typescript
-// SOLUÇÃO INGÊNUA (NUNCA FAÇA ISSO)
-// Vamos precisar dessa promoção posteriormente
-// Então vamos comentar o código antigo
-//
-// Promoção antiga
-// if (cart.quantity > 3) {
-//   if (cart.total >= 100 && cart.total < 200) {
-//     cart.discount = 10; // 10%
-//   } else if (cart.total >= 200 && cart.total < 300) {
-//     cart.discount = 20; // 20%
-//   } else if (cart.total >= 300) {
-//     cart.discount = 30; // 30%
-//   }
-// }
+```python
+# SOLUÇÃO INGÊNUA (NUNCA FAÇA ISSO)
+# Vamos precisar dessa promoção posteriormente
+# Então vamos comentar o código antigo
+#
+# Promoção antiga
+# if cart.quantity > 3:
+#   if cart.total >= 100 and cart.total < 200:
+#     cart.discount = 10 # 10%
+#   
+#   elif cart.total >= 200 and cart.total < 300:
+#     cart.discount = 20 # 20%
+#   
+#   elif cart.total >= 300:
+#     cart.discount = 30; # 30%
 
-// Nova promoção
-if (cart.total >= 150) {
-  cart.discount = 5; // 5%
-}
+# Nova promoção
+if cart.total >= 150:
+  cart.discount = 5 # 5%
 ```
 
 Além de não ser uma solução, continuamos quebrando o princípio da responsabilidade única e o princípio do aberto/fechado. Não bastasse isso, também estamos quebrando todos os testes que já foram criados anteriormente para a classe do carrinho de compras.
@@ -73,50 +71,38 @@ Agora podemos fazer com que o carrinho de compras tenha um campo para receber um
 
 Por exemplo:
 
-```typescript
-export class ShoppingCart {
-  private discount: DiscountStrategy = new DefaultDiscount();
-  
-  // ... Código omitido
+```python
+class ShoppingCart:
 
-  getTotal(): number {
-    return this.discount.getDiscount(this);
-  }
+  def __init__(self):
+    self._discount: DiscountStrategy = DefaultDiscount()
 
-  // ... Código omitido
-}
+  def getTotal(self) -> int:
+    return self.discount.getDiscount(self)
 ```
 
 Perceba que a classe do carrinho de compras não precisa fazer nenhuma lógica complexa sobre qual desconto aplicar, ela simplesmente delega a tarefa de aplicar desconto para outra classe que terá apenas um responsabilidade, aplicar um desconto.
 
 Melhor do que isso, agora você pode mudar de promoção quando quiser simplesmente configurando o campo `discount`, por exemplo:
 
-```typescript
-export class ShoppingCart {
-  private discount: DiscountStrategy = new DefaultDiscount();
-  
-  // ... Código omitido
+```python
+class ShoppingCart:
 
-  getTotal(): number {
-    return this.discount.getDiscount(this);
-  }
+  def __init__(self):
+    self._discount: DiscountStrategy = DefaultDiscount()
 
-  setDiscount(discount: DiscountStrategy): void {
-    // Configura um outro desconto qualquer
-    this.discount = discount;
-  }
+  @property
+  def discont(self):
+    return self._discount
 
-  // ... Código omitido
-}
+  @discont.setter
+  def discont(self, discount: DiscountStrategy):
+    self._discount = discont
 ```
 
-Para trocar de promoção de desconto, apenas crie uma nova classe com o algoritmo do novo desconto e configure o carrinho usando `setDiscount`.
+Para trocar de promoção de desconto, apenas crie uma nova classe com o algoritmo do novo desconto e configure o carrinho usando `discount.setter`.
 
 ---
-
-## Estrutura
-
-Veja a pasta diagramas.
 
 ## Aplicabilidade
 
@@ -125,10 +111,6 @@ Use o Strategy quando:
 - você tiver variantes de um mesmo algoritmo e precisa trocar esses algoritmos em tempo de execução;
 - você precisar isolar a regra de negócio do algoritmo que deve ser aplicado (aplicando o princípio da responsabilidade única)
 - você perceber que está usando condicionais apenas para trocar o resultado final de um algoritmo
-
-## Implementação
-
-Veja o código e os diagramas dessa pasta para entender como o Strategy é implementado.
 
 ## Consequências
 

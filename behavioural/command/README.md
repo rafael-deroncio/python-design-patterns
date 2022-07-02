@@ -8,8 +8,6 @@
 
 ## Sobre o Command
 
-Em vídeo: https://www.youtube.com/watch?v=WwDnYXr7jqk&list=PLbIBj8vQhvm0VY5YrMrafWaQY2EnJ3j8H&index=29
-
 Command é um padrão de projeto que tem a intenção de encapsular um comando diretamente em um objeto. Na verdade é um padrão bem simples, por ser a versão orientada a objetos para funções de callback, ou seja, se você conhece funções de callback, conhece o padrão command.
 
 Por exemplo, se você tem um botão na sua aplicação e deseja que esse botão mande solicitações (comandos) para outro objeto (digamos um widget na tela), ao invés de encaminhar a chamada diretamente para o widget, criaríamos um objeto específico relacionado com este comando. 
@@ -24,10 +22,6 @@ Perceba que `invoker` é quem solicita a ação, no nosso caso o botão, `comman
 
 ---
 
-## Estrutura
-
-Veja a pasta diagramas.
-
 ## Aplicabilidade
 
 Use o Command quando:
@@ -35,11 +29,6 @@ Use o Command quando:
 - você quer desacoplar o objeto que envia a solicitação do objeto que a receberá 
 - você quer tratar um comando como um objeto (com a possibilidade de armazenar, agendar, enfileirar,  fazer log, agendar execuções, ou fazer qualquer coisa que pode ser feita com um objeto)
 - você quer permitir que solicitações possam ser feitas e desfeitas
-
-
-## Implementação
-
-Veja o código e os diagramas dessa pasta para entender como o Command é implementado.
 
 ## Consequências
 

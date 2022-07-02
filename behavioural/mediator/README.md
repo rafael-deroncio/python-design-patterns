@@ -8,8 +8,6 @@
 
 ## Sobre o Mediator
 
-Em vídeo: https://www.youtube.com/watch?v=fb7NrdCo4Ko&list=PLbIBj8vQhvm0VY5YrMrafWaQY2EnJ3j8H
-
 O Mediator é um padrão de projeto muito simples. Basicamente ele sugere a criação de um objeto central que faz a mediação da comunicação entre outros objetos.
 
 Imagine um botão que só pode ser ativado quando todos os campos de input do formulário forem validados (isso é super comum). Nesse caso, muitas pessoas poderiam acoplar os inputs ao objeto do botão a fim de fazer tal validação e, quando necessário, ativar este botão para envio do formulário. 
@@ -22,20 +20,12 @@ Por exemplo, se existem dois campos de `Email`/`Password`, e um botão `Submit` 
 
 ---
 
-## Estrutura
-
-Veja a pasta diagramas.
-
 ## Aplicabilidade
 
 Use o Mediator quando:
 
 - você quer diminuir ou extinguir o acoplamento direto entre as classes que poderiam estar diretamente acopladas
 - você quer simplificar comunicações de muitos-para-muitos para comunicações um-para-muitos
-
-## Implementação
-
-Veja o código e os diagramas dessa pasta para entender como o Mediator é implementado.
 
 ## Consequências
 

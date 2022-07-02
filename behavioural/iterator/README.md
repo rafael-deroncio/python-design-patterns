@@ -6,12 +6,6 @@
 
 ---
 
-## Sobre o Iterator
-
-Em vídeo: https://www.youtube.com/watch?v=7ndeSYdmOdE&list=PLbIBj8vQhvm0VY5YrMrafWaQY2EnJ3j8H&index=43
-
----
-
 ## Estrutura
 
 Veja a pasta diagramas.
@@ -23,11 +17,6 @@ Use o Iterator quando:
 - você precisa remover a complexidade de travessia de dentro da coleção principal. Isso permite que sua coleção foque apenas em armazenar dados de maneira eficiente
 - sua coleção pode ter vários modos de travessia, como crescente, decrescente,  pelo menor número de saltos, pulando de dois em dois, ou como preferir
 - você quer disponibilizar protocolos de travessia para diferentes tipos coleções 
-
-
-## Implementação
-
-Veja o código e os diagramas dessa pasta para entender como o Iterator é implementado.
 
 ## Consequências
 

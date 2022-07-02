@@ -6,26 +6,12 @@
 
 ---
 
-## Sobre o Template Method
-
-Em vídeo: https://www.youtube.com/watch?v=-nSOKE4f2gA&list=PLbIBj8vQhvm0VY5YrMrafWaQY2EnJ3j8H&index=39
-
----
-
-## Estrutura
-
-Veja a pasta diagramas.
-
 ## Aplicabilidade
 
 Use o Template Method quando:
 
 - você precisa de variações de um mesmo algoritmo sem mudar a ordem de execução dos métodos
 - você percebe que está usando herança para alterar apenas pequenos trechos de código de um algoritmo
-
-## Implementação
-
-Veja o código e os diagramas dessa pasta para entender como o Template Method é implementado.
 
 ## Consequências
 

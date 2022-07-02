@@ -8,8 +8,6 @@
 
 ## Sobre o Memento
 
-Em vídeo: https://www.youtube.com/watch?v=crmLq8_FtLc&list=PLbIBj8vQhvm0VY5YrMrafWaQY2EnJ3j8H&index=31
-
 O Memento é um padrão de projeto que visa delegar a tarefa de salvar e restaurar o estado de um objeto para outro chamado de `Caretaker` (ou zelador). Isso seria algo bem simples de se fazer, porém precisamos tomar cuidado com o encapsulamento dos dados.
 
 Por exemplo, imagine um editor de imagens (`ImageEditor`) que tem os campos privados `filePath` e `fileFormat` (apenas para simplificação do exemplo). Não seria possível delegar para outro objeto zelador (`Caretaker`) a tarefa de salvar ou restaurar o estado porque este objeto não teria acesso aos campos privados do `ImageEditor`. Uma solução possível seria tornar os campos do `ImageEditor` públicos ao invés de privados, porém estaríamos violando o encapsulamento.
@@ -22,21 +20,12 @@ Você pode usar quaisquer artifícios da linguagem de programação escolhida ou
 
 ---
 
-## Estrutura
-
-Veja a pasta diagramas.
-
 ## Aplicabilidade
 
 Use o Memento quando:
 
 - você quer ter a possibilidade de salvar e restaurar o estado atual de um objeto sem violar o encapsulamento
 - você deseja implementar a função "desfazer" e "refazer" no seu sistema
-
-
-## Implementação
-
-Veja o código e os diagramas dessa pasta para entender como o Memento é implementado.
 
 ## Consequências
 

@@ -6,16 +6,6 @@
 
 ---
 
-## Sobre o Chain Of Responsibility
-
-Em vídeo: https://www.youtube.com/watch?v=AdzLq9FVTXs&list=PLbIBj8vQhvm0VY5YrMrafWaQY2EnJ3j8H&index=37
-
----
-
-## Estrutura
-
-Veja a pasta diagramas.
-
 ## Aplicabilidade
 
 Use o Chain Of Responsibility quando:
@@ -23,12 +13,6 @@ Use o Chain Of Responsibility quando:
 - seu sistema precisa processar uma requisição em várias etapas diferentes e você não quer criar uma ordem rígida para o processamento. O chain of responsibility permite que você altere a ordem dos objetos na cadeia facilmente (mesmo assim, mantendo uma ordem específica)
 - você quer aplicar o princípio da responsabilidade única para tratamento de dados da requisição. Cada objeto fica responsável por tratar apenas a parte que lhe couber
 - você quer permitir que os objetos responsáveis pelo tratamento de requisição possam variar em tempo de execução
-
-
-
-## Implementação
-
-Veja o código e os diagramas dessa pasta para entender como o Chain Of Responsibility é implementado.
 
 ## Consequências
 

@@ -8,8 +8,6 @@
 
 ## Sobre o State
 
-Em vídeo: https://www.youtube.com/watch?v=tSTPS2oHDmw&list=PLbIBj8vQhvm0VY5YrMrafWaQY2EnJ3j8H&index=33
-
 O State é um padrão de projeto que permite que o estado de um objeto em contexto também possa ser representado como um objeto. Isso permite usarmos polimorfismo ao invés de condicionais para mudar o comportamento do objeto contexto baseando-se no seu estado atual.
 
 ### Problema
@@ -24,14 +22,15 @@ Baseando-se no estado atual do pagamento do pedido, podemos adicionar algumas re
 
 Essas regras são apenas para exemplo, mas você pode perceber que mesmo sendo regras simples, poderíamos terminar com condicionais horríveis dentro da nossa classe `Order`, certo? Algo como:
 
-```typescript
-if (order.paymentState === 'Approved') {
-  doSomething();
-} else if (order.paymentState === 'Pending') {
-  doAnotherThing();
-} else if (order.paymentState === 'Rejected') {
-  doAnotherThing();
-}
+```python
+if order.paymentState == 'Approved':
+    doSomething()
+
+elif order.paymentState == 'Pending':
+    doAnotherThing()
+
+else corder.paymentState == 'Rejected': 
+    doAnotherThing()
 ```
 
 E isso só tende a piorar de acordo com o aumento das regras. Além de quebrarmos o princípio do aberto/fechado, nosso código tende a ficar cada vez mais complexo.
@@ -50,20 +49,12 @@ Dessa forma, ao invés de condicionais estamos usando polimorfismo para mudar o 
 
 ---
 
-## Estrutura
-
-Veja a pasta diagramas.
-
 ## Aplicabilidade
 
 Use o State quando:
 
 - o seu objeto pode se comportar de maneira diferente dependendo do seu estado atual
 - você quer evitar o uso de condicionais que alteram o comportamento da classe de acordo com valores dos seus campos
-
-## Implementação
-
-Veja o código e os diagramas dessa pasta para entender como o State é implementado.
 
 ## Consequências
 
