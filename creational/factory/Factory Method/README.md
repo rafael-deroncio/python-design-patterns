@@ -8,8 +8,6 @@
 
 ## Sobre o Factory Method
 
-Em vídeo: https://www.youtube.com/watch?v=1rB0PhvAwiU&list=PLbIBj8vQhvm0VY5YrMrafWaQY2EnJ3j8H&index=10
-
 - É um padrão de projeto de criação (lida com a criação de objetos)
 - Oculta a lógica de instanciação do código cliente. O método fábrica será responsável por instanciar as classes desejadas
 - É obtido através de herança. O método fábrica pode ser criado ou sobrescrito por subclasses
@@ -17,10 +15,6 @@ Em vídeo: https://www.youtube.com/watch?v=1rB0PhvAwiU&list=PLbIBj8vQhvm0VY5YrMr
 - Pode usar parâmetros para determinar o tipo dos objetos a serem criados ou os parâmetros a serem enviados aos objetos sendo criados.
 
 ---
-
-## Estrutura
-
-Veja a pasta diagramas.
 
 ## Aplicabilidade
 

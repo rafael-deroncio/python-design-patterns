@@ -8,8 +8,6 @@
 
 ## Destilando a intenção
 
-Em vídeo: https://www.youtube.com/watch?v=x9h8MgAvi_I&list=PLbIBj8vQhvm0VY5YrMrafWaQY2EnJ3j8H&index=4
-
 O Singleton é um padrão de projeto que tem a intenção de resolver dois problemas em uma aplicação:  
 
 - **Garantir que uma classe tenha somente uma instância no programa** - isso é muito comum para programas que acessam recursos compartilhados, como bases de dados, sistemas de arquivos, interfaces gráficas, spoolers de impressão, módulos de um programa e mais.
@@ -22,10 +20,6 @@ Note que o Singleton tem duas responsabilidades e isso quebra a regra do SRP (Si
 Em entrevista, anos após a criação do livro, Erich Gamma (um dos autores), mencionou seu interesse em remover o Singleton se fossem reescrever o livro na atualidade. Segundo ele, o uso de singleton quase sempre é sinal de problemas de design. (https://bit.ly/nosingleton) 
 
 ---
-
-## Estrutura
-
-Veja a pasta diagramas.
 
 ## Aplicabilidade
 

@@ -6,10 +6,6 @@
 
 ---
 
-## Sobre o Abstract Factory
-
-Em vídeo: https://www.youtube.com/watch?v=UPSuHqNsNs4&list=PLbIBj8vQhvm0VY5YrMrafWaQY2EnJ3j8H&index=12
-
 O Abstract Factory é usado para garantir que uma família de produtos relacionados ou dependentes trabalhem sempre juntos (*veja aplicabilidade para mais casos de uso*).  
 
 Por exemplo: imagine que está criando um sistema de interfaces gráficas que deva funcionar em Linux, Windows e Mac. É natural termos várias classes representando elementos como Janela, Botão, Input e assim por diante. Também é natural usarmos composição entre os elementos, já que um botão pode estar dentro de uma janela ou formulário (não é um requisito para o padrão, mas pode acontecer). Além disso, os sistemas operacionais também precisam de implementações diferentes das classes de interface gráfica.  
@@ -60,10 +56,6 @@ A única coisa que também precisamos, mas que eu não mencionei até aqui é um
 No meu exemplo as interfaces de produtos seriam: `UI`, `Button` e `Input` (mencionei isso com *`: Interface`* logo após a assinatura dos métodos no exemplo acima).
 
 ---
-
-## Estrutura
-
-Veja a pasta diagramas.
 
 ## Aplicabilidade
 
