@@ -6,26 +6,12 @@
 
 ---
 
-## Sobre o Visitor
-
-Em vídeo: https://www.youtube.com/watch?v=5PRG7rT2dcU&list=PLbIBj8vQhvm0VY5YrMrafWaQY2EnJ3j8H&index=45
-
----
-
-## Estrutura
-
-Veja a pasta diagramas.
-
 ## Aplicabilidade
 
 Use o Visitor quando:
 
 - você precisa executar um algoritmo em todos os elementos de uma estrutura mais complexa (como uma estrutura criada com o padrão Composite)
 - você quer separar uma lógica complexa em objetos auxiliares
-
-## Implementação
-
-Veja o código e os diagramas dessa pasta para entender como o Visitor é implementado.
 
 ## Consequências
 
