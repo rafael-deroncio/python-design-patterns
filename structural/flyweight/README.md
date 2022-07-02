@@ -32,10 +32,6 @@ Além disso, eles também recomendam que você só use o padrão Flyweight em um
 
 ---
 
-## Estrutura
-
-Veja a pasta diagramas.
-
 ## Aplicabilidade
 
 Só use o Flyweight quanto TODAS as condições a seguir forem verdadeiras:
@@ -45,10 +41,6 @@ Só use o Flyweight quanto TODAS as condições a seguir forem verdadeiras:
 - a maioria dos estados de objetos podem se tornar extrínsecos;
 - muitos objetos podem ser substituídos por poucos objetos compartilhados;
 - a aplicação não depende da identidade dos objetos.
-
-## Implementação
-
-Veja o código e os diagramas dessa pasta para entender como o Flyweight é implementado.
 
 ## Consequências
 

@@ -21,20 +21,12 @@ Como esse padrão visa unificar coisas que poderiam estar separadas no sistema, 
 
 ---
 
-## Estrutura
-
-Veja a pasta diagramas.
-
 ## Aplicabilidade
 
 Use o padrão Façade quando:
 
 - você quer disponibilizar uma interface mais simples para um sistema complexo
 - você quer criar pontos de entrada para determinadas partes do sistema, como serviços externos, camadas da aplicação e objetos complexos dentro em determinadas partes do código  
-
-## Implementação
-
-Veja o código e os diagramas dessa pasta para entender como o Façade é implementado.
 
 ## Consequências
 

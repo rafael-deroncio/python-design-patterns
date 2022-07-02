@@ -45,10 +45,6 @@ Apesar de estruturas parecidas, todas as intenções refletem exatamente o que c
 
 ---
 
-## Estrutura
-
-Veja a pasta diagramas.
-
 ## Aplicabilidade
 
 Use o padrão Proxy quando:
@@ -57,10 +53,6 @@ Use o padrão Proxy quando:
 - você que restringir acesso a partes da sua aplicação (proxy de proteção)
 - você quer uma ligação entre seu sistema e um sistema remoto. O proxy pode fingir ser a interface do objeto remoto e lidar com toda a complexidade de conexão e transmissão de dados (proxy remoto)
 - você quer fazer cache de chamadas já realizadas (proxy inteligente ou proxy de cache)
-
-## Implementação
-
-Veja o código e os diagramas dessa pasta para entender como o Proxy é implementado.
 
 ## Consequências
 

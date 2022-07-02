@@ -21,10 +21,6 @@ O padrão Composite é exatamente isso: podemos tratar um único objeto ou uma e
 
 ---
 
-## Estrutura
-
-Veja a pasta diagramas.
-
 ## Aplicabilidade
 
 Use o padrão Composite quando:

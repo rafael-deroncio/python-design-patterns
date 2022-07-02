@@ -13,10 +13,6 @@ O Decorator é uma padrão de projeto usado para adicionar funcionalidades a obj
 
 ---
 
-## Estrutura
-
-Veja a pasta diagramas.
-
 ## Aplicabilidade
 
 Use o padrão Decorator quando:
